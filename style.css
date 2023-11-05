@@ -20,6 +20,15 @@ header {
   height: 10vh;
 }
 
+header,
+aside {
+  cursor: pointer;
+}
+
+.logo-text {
+  word-spacing: 20px;
+}
+
 .edit-icon {
   cursor: pointer;
   background: white;
@@ -45,6 +54,7 @@ ul {
   align-items: center;
   gap: 30px;
   color: #545454;
+  padding: 25px;
 }
 
 .search-input::placeholder {
@@ -61,6 +71,40 @@ ul {
 
 .search-input:focus {
   border-bottom: 2px solid purple;
+}
+.notification {
+  padding: 10px 15px;
+  position: relative;
+}
+
+.notification .badge {
+  position: absolute;
+  top: 0px;
+  right: 3px;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 14px;
+}
+
+.widget {
+  width: 350px;
+  height: 260px;
+  background-color: white;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  border-radius: 10px;
+  right: 40px;
+}
+
+ul.widget-list {
+  color: #7f7f7f;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 aside {
