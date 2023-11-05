@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #efefef;
   box-sizing: border-box;
   font-family: 'Roboto';
   display: grid;
@@ -10,6 +11,58 @@ body {
     'aside footer footer footer footer footer footer footer footer';
 }
 
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
+  height: 10vh;
+}
+
+.edit-icon {
+  cursor: pointer;
+  background: white;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: dimgrey;
+}
+
+.search-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: #545454;
+}
+
+.search-input::placeholder {
+  font-size: 16px;
+}
+
+.search-input {
+  border: none;
+  border-bottom: 2px solid lightgray;
+  background-color: #efefef;
+  outline: none;
+  padding: 5px;
+}
+
+.search-input:focus {
+  border-bottom: 2px solid purple;
+}
+
 aside {
   background: url('images/sidebar-1.jpg');
   background-size: cover;
@@ -17,13 +70,7 @@ aside {
   grid-area: aside;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode:darken;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+  background-blend-mode: darken;
 }
 
 .logo-name h1 {
@@ -33,21 +80,30 @@ ul {
   margin: 0px 25px;
 }
 
-.gj{
+.container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.profile-info {
+.sidebar-items {
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
-.avatar img {
+.dashboard-item {
+  background-color: #d91a60;
+  border-radius: 5px;
+}
+
+.page-item:hover {
+  background-color: rgba(255, 255, 255, 0.253);
+}
+
+.profile img {
   width: 45px;
   border-radius: 50%;
 }
@@ -81,15 +137,6 @@ main {
 .leoni {
   grid-area: leoni;
   background-color: rgb(151, 231, 205);
-}
-
-header {
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-  align-items: center;
-  height: 10vh;
 }
 
 footer {

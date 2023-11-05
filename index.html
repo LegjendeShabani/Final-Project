@@ -12,15 +12,27 @@
 
 <body>
     <header>
-        <div id="page-logo">
-            <a href="/index.html">Logo</a>
+        <div class="container">
+            <div class="edit-icon">
+                <span class="material-symbols-outlined" title="See More">
+                    more_vert
+                </span>
+            </div>
+            <div class="item-name">
+                <p>Dashboard</p>
+            </div>
         </div>
 
         <nav>
             <ul>
-                <li><span class="material-symbols-outlined">search</span></li>
+                <div class="search-text">
+                    <li>
+                        <input type="text" class="search-input" placeholder="Search">
+                    </li>
+                    <li class="edit-icon"><span class="material-symbols-outlined" title="Search">search</span></li>
+                </div>
                 <li><span class="material-symbols-outlined">dashboard</span></li>
-                <li><span class="material-symbols-outlined">notifications</span></li>
+                <li class="info-item"><span class="material-symbols-outlined">notifications</span></li>
                 <li><span class="material-symbols-outlined">person</span></li>
             </ul>
         </nav>
@@ -33,9 +45,9 @@
 
         <hr>
 
-        <section class="profile-info">
-            <div class="gj">
-                <div class="avatar">
+        <section class="sidebar-items">
+            <div class="container">
+                <div class="profile">
                     <img src="images/avatar.jpg" alt="avatar">
                 </div>
                 <div class="user-name">
@@ -52,54 +64,141 @@
 
         <hr>
 
-        <section class="profile-info">
-            <div class="gj">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        dashboard
-                    </span>
-                </div>
-                <div class="user-name">
-                    <p>dashboard</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="profile-info">
-            <div class="gj">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        image
-                    </span>
-                </div>
-                <div class="user-name">
-                    <p>Pages</p>
-                </div>
-            </div>
-            <div class="arrow-down">
-                <span class="material-symbols-outlined">
-                    keyboard_arrow_down
-                </span>
-            </div>
-        </section>
-
-        <section class="profile-info">
-            <div class="gj">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        apps
+        <div class="dashboard-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            dashboard
                         </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Dashboard</p>
+                    </div>
                 </div>
-                <div class="user-name">
-                    <p>Components</p>
-                </div>
-            </div>
-            <div class="arrow-down">
-                <span class="material-symbols-outlined">
-                    keyboard_arrow_down
-                </span>
-            </div>
+        </div>
         </section>
+
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            image
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Pages</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            apps
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Components</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            content_paste
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Forms</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            table
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Tables</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Maps</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-item">
+            <section class="sidebar-items">
+                <div class="container">
+                    <div class="icon-item">
+                        <span class="material-symbols-outlined">
+                            widgets
+                        </span>
+                    </div>
+                    <div class="item-name">
+                        <p>Widgets</p>
+                    </div>
+                </div>
+                <div class="arrow-down">
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </section>
+        </div>
     </aside>
 
     <main>
@@ -119,9 +218,8 @@
             <h1>leoni</h1>
         </section>
     </main>
-
     <footer>
-        <h1>leon sh</h1>
+        <h1>leon s h</h1>
     </footer>
 </body>
 
