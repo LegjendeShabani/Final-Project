@@ -72,6 +72,7 @@ ul {
 .search-input:focus {
   border-bottom: 2px solid purple;
 }
+
 .notification {
   padding: 10px 15px;
   position: relative;
@@ -89,10 +90,14 @@ ul {
 }
 
 .widget {
+  display: none;
+}
+
+.info-item:hover ~ .widget {
   width: 350px;
   height: 260px;
   background-color: white;
-  display: flex;
+  display: block;
   z-index: 1;
   position: absolute;
   top: 20px;
