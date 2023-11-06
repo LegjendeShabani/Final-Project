@@ -127,6 +127,7 @@ ul.widget-list {
 
 .widget ul li:hover {
   background-color: orangered;
+  color: white;
 }
 
 aside {
