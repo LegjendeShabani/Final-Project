@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" .">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,8 +22,8 @@
                 <p>Dashboard</p>
             </div>
         </div>
-        <nav>
-            <ul>
+        <nav class="nav-elements">
+            <ul class="gap-30">
                 <div class="search-text">
                     <li>
                         <input type="text" class="search-input" placeholder="Search">
@@ -36,17 +36,17 @@
                     <span class="material-symbols-outlined">dashboard</span>
                 </li>
                 <div class="notification">
-                    <li class="info-item">
+                    <li class="info-item" tabindex="0">
                         <span class="material-symbols-outlined">notifications</span>
                         <span class="badge">5</span>
                     </li>
                     <div class="widget">
                         <ul class="widget-list">
-                            <li>John Doe sent a message</li>
-                            <li>Someone viewed your profile</li>
-                            <li>John Doe sent a message</li>
-                            <li>Someone viewed your profile</li>
-                            <li>Another notification</li>
+                            <li class="widget-item">John Doe sent a message</li>
+                            <li class="widget-item">Someone viewed your profile</li>
+                            <li class="widget-item">John Doe sent a message</li>
+                            <li class="widget-item">Someone viewed your profile</li>
+                            <li class="widget-item">Another notification</li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +56,6 @@
             </ul>
         </nav>
     </header>
-
     <aside class="sidebar-nav">
         <section class="logo-name">
             <h1><span class="logo-text">CP </span>COOL PAGE</h1>
@@ -221,24 +220,33 @@
     </aside>
 
     <main>
-        <section class="le">
-            <h1>le</h1>
-        </section>
-
-        <section class="leo">
-            <h1>leo</h1>
-        </section>
-
-        <section class="leon">
-            <h1>leon</h1>
-        </section>
-
-        <section class="leoni">
-            <h1>leoni</h1>
+        <section class="top-loc">
+            <div class="container">
+                <div class="world-icon">
+                    <span class="material-symbols-outlined">
+                        language
+                    </span>
+                </div>
+                <div class="item-title">
+                    <p>Global Sales by Top Locations</p>
+                </div>
+            </div>
+            <div class="table-data">
+                <table style="width: 40%;">
+                    <tr>
+                        <td colspan="2" class="country-cell">
+                            <img src="images/usa-flag.png" alt="#"> <span>USA</span>
+                        </td>
+                        <td class="data-cell">2,920</td>
+                        <td class="data-cell">53.23%</td>
+                    </tr>
+                </table>
+            </div>
         </section>
     </main>
+
     <footer>
-        <h1>leon s h</h1>
+        <h1>Footer</h1>
     </footer>
 </body>
 

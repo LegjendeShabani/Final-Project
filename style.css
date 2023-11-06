@@ -9,6 +9,7 @@ body {
     'aside header header header header header header header header'
     'aside main main main main main main main main'
     'aside footer footer footer footer footer footer footer footer';
+  height: 100vh;
 }
 
 header {
@@ -23,6 +24,11 @@ header {
 header,
 aside {
   cursor: pointer;
+}
+
+aside.sidebar-nav {
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .logo-text {
@@ -52,8 +58,12 @@ ul {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 30px;
   color: #545454;
+  padding: 10px 20px;
+}
+
+.gap-30 {
+  gap: 30px;
   padding: 25px;
 }
 
@@ -93,23 +103,30 @@ ul {
   display: none;
 }
 
-.info-item:hover ~ .widget {
+.info-item:focus ~ .widget {
   width: 350px;
-  height: 260px;
+  height: 215px;
   background-color: white;
   display: block;
   z-index: 1;
+  border: 1px solid lightgray;
   position: absolute;
   top: 20px;
   border-radius: 10px;
-  right: 40px;
+  right: 20px;
 }
 
 ul.widget-list {
   color: #7f7f7f;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: baseline;
+}
+.widget ul li {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.widget ul li:hover {
+  background-color: orangered;
 }
 
 aside {
@@ -119,7 +136,7 @@ aside {
   grid-area: aside;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: darken;
+  background-blend-mode: color;
 }
 
 .logo-name h1 {
@@ -159,33 +176,51 @@ aside {
 
 main {
   grid-area: main;
-  background: yellow;
   width: 100%;
-  height: 90vh;
-  display: grid;
-  grid-template-areas:
-    'le leo leon'
-    'leoni leoni leoni';
+  height: 100%;
+  overflow-y: scroll;
 }
 
-.le {
-  grid-area: le;
-  background-color: rgb(40, 219, 159);
+.top-loc {
+  width: auto;
+  height: 400px;
+  margin: 80px 30px;
+  background-color: white;
+  border-radius: 5px;
 }
 
-.leo {
-  grid-area: leo;
-  background-color: rgb(4, 52, 36);
+top-loc .container {
+  display: flex;
+  align-items: end;
 }
 
-.leon {
-  grid-area: leon;
-  background-color: rgb(0, 0, 0);
+.world-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  margin-left: 20px;
+  top: -15px;
 }
 
-.leoni {
-  grid-area: leoni;
-  background-color: rgb(151, 231, 205);
+.item-title {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+td.country-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-cell span {
+  padding: 10px 5px;
 }
 
 footer {
