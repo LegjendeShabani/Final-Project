@@ -7,14 +7,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 7fr;
-  grid-template-areas:
-    'aside header'
-    'aside main'
-    'aside main'
-    'aside main'
-    'aside main'
-    'aside main'
-    'aside footer';
+  grid-template-areas: 'aside container';
 }
 
 header {
@@ -27,17 +20,21 @@ header {
   height: 10vh;
 }
 
-header,
+/* header,
 aside {
   cursor: pointer;
-}
+} */
 
-aside.sidebar-nav,
-main {
+aside {
+  background: url('images/sidebar-1.jpg');
+  background-size: cover;
+  padding: 0 20px;
+  grid-area: aside;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: color;
   overflow-y: scroll;
   overflow-x: clip;
-  /* width: max-content; */
-  /* height: 100%; */
 }
 
 aside.sidebar-nav::-webkit-scrollbar,
@@ -155,16 +152,6 @@ ul.widget-list {
   color: white;
 }
 
-aside {
-  background: url('images/sidebar-1.jpg');
-  background-size: cover;
-  padding: 0 20px;
-  grid-area: aside;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: color;
-}
-
 .logo-name h1 {
   font-weight: 300;
   font-size: 22px;
@@ -207,10 +194,12 @@ aside {
   border-radius: 50%;
 }
 
-main {
-  grid-area: main;
-  padding: 0 20px;
+.header-container {
+  grid-area: container;
+  overflow-y: scroll;
+  overflow-x: clip;
   /* width: 100%; */
+  padding: 0px 20px;
 }
 
 .top-loc {
@@ -392,24 +381,43 @@ span.widget-number {
 }
 .widget-container {
   flex: 1;
-  border: 1px solid blue;
+  border-radius: 5px;
+  background-color: white;
   margin: 10px;
+  padding: 10px 20px 5px 20px;
 }
 
 .widget-container img {
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
   margin-top: -30px;
+}
+
+.card-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  color: darkgrey;
+}
+
+.card-info {
+  color: darkgrey;
+  height: 80px;
+  padding-bottom: 25px;
 }
 
 /* Footer */
 footer {
   grid-area: footer;
-  background: rgb(0, 255, 13);
+  /* background: rgb(0, 255, 13); */
 }
 footer,
 ul {
-  padding: 0px;
+  margin: 0px;
 }
 
 /* @media screen and (max-width: 1000px) {
