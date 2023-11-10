@@ -202,6 +202,27 @@ ul.widget-list {
   padding: 0px 20px;
 }
 
+.widget-icon.icon-1 {
+  background: orange;
+}
+
+.widget-icon.icon-2 {
+  background: deeppink;
+}
+
+.widget-icon.icon-3 {
+  background: limegreen;
+}
+
+.widget-icon.icon-4 {
+  background: dodgerblue;
+}
+
+.item-title {
+  font-weight: 300;
+  font-size: 20px;
+}
+
 .top-loc {
   width: auto;
   height: auto;
@@ -212,9 +233,9 @@ ul.widget-list {
 
 .two-column-layout {
   background: white;
-  margin: -20px 15px;
-  padding: 20px 10px;
-  display: flex;
+  margin: 0px 10px;
+  /* padding: 20px 10px; */
+  /* display: flex; */
   border-radius: 10px;
 }
 
@@ -245,30 +266,15 @@ ul.widget-list {
   top: -15px;
 }
 
-.widget-icon.icon-1 {
-  background: orange;
-}
-
-.widget-icon.icon-2 {
-  background: deeppink;
-}
-
-.widget-icon.icon-3 {
-  background: limegreen;
-}
-
-.widget-icon.icon-4 {
-  background: dodgerblue;
-}
-
-.item-title {
-  font-weight: 300;
-  font-size: 20px;
+/* table */
+tbody {
+  padding-right: 20px;
 }
 
 .table-data {
   width: auto;
-  padding: 15px 30px;
+  padding: 15px 20px;
+  display: flex;
 }
 
 td.country-cell {
@@ -283,11 +289,16 @@ td.country-cell span {
 .custom-table {
   border-collapse: collapse;
   width: 100%;
+  display: contents;
 }
 
 .custom-table td {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid #dadada; /* Keep the border for all rows */
   padding: 10px;
+}
+
+.custom-table tr:last-child td {
+  border-bottom: none; /* Remove the border for the last row only */
 }
 
 td.country-cell span {
@@ -298,6 +309,7 @@ td.country-cell span {
 iframe {
   display: flex;
   width: 100%;
+  border: none;
 }
 
 /* .data-widget {
@@ -373,23 +385,46 @@ span.widget-number {
 }
 
 /* Cards */
-
 .card-widget {
   display: flex;
   justify-content: center;
   text-align: center;
 }
+
 .widget-container {
   flex: 1;
   border-radius: 5px;
   background-color: white;
   margin: 10px;
   padding: 10px 20px 5px 20px;
+  position: relative; /* Add relative positioning to the container */
 }
 
-.widget-container img {
+span.overview-icon {
+  color: darkgrey;
+}
+span.edit-widget {
+  color: green;
+}
+span.close-widget {
+  color: red;
+}
+.image-animation span {
+  display: none;
+  position: relative;
+  transform: translate(-50%, -50%); /* Center the text within the container */
+  z-index: 1; /* Bring the text to the front */
+}
+.image-animation:hover span {
+  display: inline; /* Display the text on hover */
+  font-size: 18px;
+}
+
+.image-animation img {
   width: 100%;
   border-radius: 10px;
+  position: static;
+  transition: transform 0.9s ease; /* Add a transition for the transform property */
   margin-top: -30px;
 }
 
@@ -410,14 +445,47 @@ span.widget-number {
   padding-bottom: 25px;
 }
 
+.image-animation:hover img {
+  transform: translateY(
+    -20px
+  ); /* Move the image upward by 10 pixels when the container is hovered */
+}
+
+.card-icons {
+  position: relative;
+  margin-top: -40px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.card-title {
+  margin-top: 0px;
+  font-weight: 300;
+}
+
 /* Footer */
 footer {
   grid-area: footer;
-  /* background: rgb(0, 255, 13); */
+  display: flex;
+  justify-content: space-between;
 }
+
 footer,
 ul {
   margin: 0px;
+  gap: 10px;
+  color: black;
+  font-weight: 500;
+}
+footer p {
+  color: grey;
+  font-style: italic;
+  font-weight: 300;
+}
+footer span {
+  color: grey;
+  font-style: normal;
+  font-weight: 300;
 }
 
 /* @media screen and (max-width: 1000px) {
