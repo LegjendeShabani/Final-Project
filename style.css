@@ -6,7 +6,8 @@ body {
   font-family: 'Roboto';
   height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 7fr;
+  /* grid-template-columns: 2fr 7fr; */
+  grid-template-columns: auto 1fr;
   grid-template-areas: 'aside container';
 }
 
@@ -20,11 +21,6 @@ header {
   height: 10vh;
 }
 
-/* header,
-aside {
-  cursor: pointer;
-} */
-
 aside {
   background: url('images/sidebar-1.jpg');
   background-size: cover;
@@ -37,11 +33,13 @@ aside {
   overflow-x: clip;
 }
 
+/* scrollbar */
 aside.sidebar-nav::-webkit-scrollbar,
 main::-webkit-scrollbar {
   background: transparent; /* background of the scrollable area background */
   width: 10px;
 }
+
 aside.sidebar-nav::-webkit-scrollbar-thumb,
 main::-webkit-scrollbar-thumb {
   background: #888; /* Color of the thumb area */
@@ -124,6 +122,7 @@ ul {
   display: none;
 }
 
+/* Activate the notification widget by clicking on it */
 .info-item:focus ~ .widget {
   width: 350px;
   height: 215px;
@@ -198,10 +197,10 @@ ul.widget-list {
   grid-area: container;
   overflow-y: scroll;
   overflow-x: clip;
-  /* width: 100%; */
   padding: 0px 20px;
 }
 
+/* widget icons */
 .widget-icon.icon-1 {
   background: orange;
 }
@@ -234,8 +233,6 @@ ul.widget-list {
 .two-column-layout {
   background: white;
   margin: 0px 10px;
-  /* padding: 20px 10px; */
-  /* display: flex; */
   border-radius: 10px;
 }
 
@@ -311,12 +308,6 @@ iframe {
   width: 100%;
   border: none;
 }
-
-/* .data-widget {
-  margin: 80px 20px;
-  display: flex;
-  justify-content: space-between;
-} */
 
 .data-widget {
   display: flex;
@@ -400,20 +391,11 @@ span.widget-number {
   position: relative; /* Add relative positioning to the container */
 }
 
-span.overview-icon {
-  color: darkgrey;
-}
-span.edit-widget {
-  color: green;
-}
-span.close-widget {
-  color: red;
-}
+/* Card images */
 .image-animation span {
   display: none;
   position: relative;
-  transform: translate(-50%, -50%); /* Center the text within the container */
-  z-index: 1; /* Bring the text to the front */
+  transform: translate(-50%, -50%); /*Center the text within the container */
 }
 .image-animation:hover span {
   display: inline; /* Display the text on hover */
@@ -424,31 +406,27 @@ span.close-widget {
   width: 100%;
   border-radius: 10px;
   position: static;
-  transition: transform 0.9s ease; /* Add a transition for the transform property */
+  transition: transform 0.5s cubic-bezier(0.51, -0.62, 0.6, 1.67); /* Add a transition for the transform property */
   margin-top: -30px;
-}
-
-.card-description {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-price {
-  display: flex;
-  align-items: center;
-  color: darkgrey;
-}
-
-.card-info {
-  color: darkgrey;
-  height: 80px;
-  padding-bottom: 25px;
 }
 
 .image-animation:hover img {
   transform: translateY(
     -20px
   ); /* Move the image upward by 10 pixels when the container is hovered */
+}
+
+/* card-icons */
+span.overview-icon {
+  color: darkgrey;
+}
+
+span.edit-widget {
+  color: green;
+}
+
+span.close-widget {
+  color: red;
 }
 
 .card-icons {
@@ -458,9 +436,28 @@ span.close-widget {
   gap: 10px;
 }
 
+/* card-info */
+
 .card-title {
   margin-top: 0px;
   font-weight: 300;
+}
+
+.card-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info {
+  color: darkgrey;
+  height: 10vh;
+  padding-bottom: 25px;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  color: darkgrey;
 }
 
 /* Footer */
@@ -488,7 +485,77 @@ footer span {
   font-weight: 300;
 }
 
-/* @media screen and (max-width: 1000px) {
+/* Media queries */
+
+@media (max-width: 700px) {
+  body {
+    grid-template-areas:
+      'header header header'
+      'main main main '
+      'footer footer footer';
+  }
+  aside {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: inherit;
+    margin-bottom: 1rem;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .container{
+    /* display: flex; */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  nav.nav-elements {
+    display: none;
+  }
+  .gap-30 {
+    gap: 10px;
+  }
+  .table-data {
+    flex-wrap: wrap;
+    padding: 0px;
+  }
+  .widget-item {
+    padding: 10px;
+  }
+  .data-widget {
+    flex-wrap: wrap;
+  }
+  .widget-item {
+    margin-bottom: 5rem;
+    width: 100%;
+}
+section.data-widget.second-widget {
+  margin-top: -5rem;
+  margin-bottom: 0px;
+}
+.custom-table {
+  display: table;
+}
+
+td.data-cell {
+width: 30px;
+}
+.card-bottom {
+padding: 10px 20px;
+width: max-content;
+}
+.widget-container {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 700px) and (max-width: 900px) {
   body {
     grid-template-areas:
       'header header header'
@@ -496,15 +563,6 @@ footer span {
       'footer footer footer';
   }
 
-  main {
-    grid-template-areas:
-      'le'
-      'leo'
-      'leon'
-      'leoni';
-  }
-
   aside {
     display: none;
   }
-} */
